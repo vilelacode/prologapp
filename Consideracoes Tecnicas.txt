@@ -9,6 +9,7 @@ Escolhas Técnicas:
 •	Da mesma forma, embora não haja manipulação direta no objeto em alguns “gets” achei desnecessária a utilização de projections afim de otimização de performace pra API.
 •	Do ponto de vista didático algumas pessoas podem considerar anotações “//” ou “TODOs” no código algum referencial para orientação numa possível regra de negócio, porém tende a se tornar na maioria das vezes obsoleto além de todo código ter de ser autoexplicativo na sua concepção.
 •	Utilizei a estrutura de testes de integrações com MockMVC e testes unitários com Mockito pois foram as estruturas que já utilizei em trabalhos anteriores.
+•	Também não foram usadas variáveis de ambiente para configuração do banco de dados, porém num projeto real é fundamental e de preferência de um repositório de parâmetros na AWS.
 
 Agradeço muito a atenção e gostaria demais de ter uma contribuição didática de vocês no projeto. Foi um desafio devido minhas ocupações de serviço e a falta de tempo porém agradeço muito por poder participar.
 

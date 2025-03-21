@@ -1,0 +1,16 @@
+Observações adicionais sobre a API.
+
+Informações sobre a regras de negócio: 
+•	Pela modelagem da API um pneu pode existir independente do veículo, embora haja uma tabela de conciliação. 
+
+Escolhas Técnicas: 
+•	A anotação @Transactional(readOnly=true) para “Gets” pode ser considerada boa prática do ponto de vista de gerenciamento de leitura de banco do hibernate, por outro lado também consome mais do Spring não achei relevante adotar.
+•	Devido a divisão das responsabilidades existem algumas transações nos métodos da API que poderiam serem transferidas para querys específicas, mas pra fim de escalabilidade e manutenibilidade “apenas enviar um DTO para uma query do JPA” talvez não fosse a melhor escolha.
+•	Da mesma forma, embora não haja manipulação direta no objeto em alguns “gets” achei desnecessária a utilização de projections afim de otimização de performace pra API.
+•	Do ponto de vista didático algumas pessoas podem considerar anotações “//” ou “TODOs” no código algum referencial para orientação numa possível regra de negócio, porém tende a se tornar na maioria das vezes obsoleto além de todo código ter de ser autoexplicativo na sua concepção.
+•	Utilizei a estrutura de testes de integrações com MockMVC e testes unitários com Mockito pois foram as estruturas que já utilizei em trabalhos anteriores.
+
+Agradeço muito a atenção e gostaria demais de ter uma contribuição didática de vocês no projeto. Foi um desafio devido minhas ocupações de serviço e a falta de tempo porém agradeço muito por poder participar.
+
+
+Fábio Vilela

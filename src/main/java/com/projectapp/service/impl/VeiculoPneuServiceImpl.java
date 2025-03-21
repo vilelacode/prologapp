@@ -1,6 +1,7 @@
 package com.projectapp.service.impl;
 
-import com.projectapp.config.CustomExceptions.*;
+import com.projectapp.config.CustomExceptions.VeiculoException;
+import com.projectapp.config.CustomExceptions.VeiculoPneuException;
 import com.projectapp.entity.Pneu;
 import com.projectapp.entity.Veiculo;
 import com.projectapp.entity.VeiculoPneu;
@@ -16,7 +17,6 @@ import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.data.crossstore.ChangeSetPersister;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

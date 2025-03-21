@@ -35,8 +35,7 @@ class VeiculoServiceImplTest {
 
     @Mock
     private VeiculoRepository veiculoRepository;
-    @Mock
-    private VeiculoPneuRepository veiculoPneuRepository;
+
     @Mock
     private PneuRepository pneuRepository;
 

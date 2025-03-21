@@ -2,10 +2,10 @@ package com.projectapp.controller;
 
 import com.projectapp.config.CustomExceptions;
 import com.projectapp.entity.Pneu;
-import com.projectapp.enumerated.StatusPneu;
 import com.projectapp.entity.Veiculo;
 import com.projectapp.entity.VeiculoPneu;
 import com.projectapp.entity.VeiculoPneuId;
+import com.projectapp.enumerated.StatusPneu;
 import com.projectapp.enumerated.StatusVeiculo;
 import com.projectapp.repository.PneuRepository;
 import com.projectapp.repository.VeiculoPneuRepository;
@@ -24,9 +24,9 @@ import java.util.List;
 import static com.projectapp.util.Constants.VEICULO_NAO_ENCONTRADO;
 import static com.projectapp.util.TestConstants.*;
 import static org.hamcrest.Matchers.is;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
@@ -110,7 +110,7 @@ class VeiculoPneuControllerIntegrationTest {
                 .andExpect(jsonPath("$.error", is("Erro no veículo")))
                 .andExpect(jsonPath("$.message", is(VEICULO_NAO_ENCONTRADO)))
                 .andExpect(jsonPath("$.status", is(400)))
-                .andExpect(result -> assertTrue(result.getResolvedException() instanceof CustomExceptions.VeiculoException));;
+                .andExpect(result -> assertTrue(result.getResolvedException() instanceof CustomExceptions.VeiculoException));
     }
 
     @Test

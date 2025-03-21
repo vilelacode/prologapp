@@ -2,10 +2,8 @@ package com.projectapp.controller;
 
 import com.projectapp.service.VeiculoPneuService;
 import com.projectapp.service.dto.VeiculoPneuDTO;
-import com.projectapp.util.mappers.VeiculoPneuMapper;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

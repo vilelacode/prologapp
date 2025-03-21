@@ -11,7 +11,11 @@ Esta é uma API REST desenvolvida em Spring Boot para gerenciar veículos e seus
 
 ## Configuração do Ambiente
 
-1. Clone o repositório
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/vilelacode/prologapp.git
+   cd seu_usuario/proloapp
+   ```
 2. Inicie o banco de dados usando Docker Compose:
    ```bash
    docker-compose up -d
